@@ -6,10 +6,8 @@ Snippet Takes the record in a table with the latest date,
 then filters the table for a date range between the latest date,
 and a specified interval (3 days ago).
 
-
-
+Platform: Microsoft SQL Server 2014
 */
-/**** Snippet to Select a date Range ****/
 
   DECLARE @to_date datetime = (SELECT max(EventStamp) from [WWALMDB].[dbo].[v_AlarmEventHistory]);
   DECLARE @interval_length int  = -3; /* Must Be a negative integer */
